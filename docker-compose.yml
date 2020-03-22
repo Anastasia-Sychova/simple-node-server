@@ -1,0 +1,12 @@
+version: '2.4'
+services:
+  simple-node-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: simple-node-server
+    restart: unless-stopped
+    cpus: 2
+    mem_limit: 2g
+    volumes:
+      - ./:/usr/src/app
